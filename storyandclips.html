@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Csoknyai Balázs">
+    <meta name="copyright" content="Gundam Database">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story & Clips</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body onLoad="spoiler()">
+    <nav id="teto">
+        <a href="index.html">Home</a>
+        <a href="characters.html" class="middleleft">Characters</a>
+        <a href="#" class="middleright" id="active">Story & Clips</a>
+        <a href="shop.html">Shop</a>
+    </nav>
+    <header id="logo">
+        <img src="imgs/logo.jpeg" alt="Mobile Suit Gundam The Witch From Mercury logo" id="logokep">
+        <img src="imgs/scroll.gif" alt="Scroll down" id="gorgess">
+    </header>
+    <!-- Szöveges rész -->
+    <div id="container">
+        <article class="blokk">
+            <h2>
+                Story
+            </h2>
+            <p>
+                In the year Ad Stella 101, researchers at the Vanadis Institute created "GUND", an advanced brain–computer interface that enabled the human nervous system to control artificial appendices and organs. The purpose of GUND was to enable humans to survive in the harsh environment of space. After receiving funding from mobile suit manufacturer Ochs Earth, the technology was developed into the "GUND Format" and employed for military uses, leading to the creation of "GUND-ARMS": mobile suits that use the GUND Format to increase the performance of their pilots. However, extensive use of GUND-ARMS resulted in pilots being crippled or even killed.
+                <br><br>
+                In response, the Mobile Suit Development Council, led by the top mobile suit development companies, ordered a permanent ban on the GUND Format and all its applications. Council member Delling Rembran deployed the special forces team Dominicus to destroy the Vanadis research facility Fólkvangr, killing everyone aboard to erase all traces of the technology. Only two people survived: mobile suit test pilot Elnora Samaya and her four-year-old daughter Ericht Samaya. In the aftermath, those responsible for the development of the GUND Format were ostracized, and because the team was primarily composed of women, they became known as "witches".
+                <br><br>
+                In Ad Stella 122, 21 years after the Vanadis incident, Suletta Mercury transfers from Mercury to the Asticassia School of Technology, an academic institute run by the megacorporation Benerit Group. Upon arrival, she encounters a girl escaping the institute, Miorine Rembran, who wants to escape from the control of her father. As their paths cross in the academy with different ambitions and goals, Suletta will have to prove her worth as a pilot as she steps into the academy alongside the Gundam Aerial, a mobile suit built with forbidden GUND Format technology.
+            </p>
+        </article>
+        <section id="videos">
+            <article>
+                <h2>Some of our favourite clips from the 1st season</h2>
+                <h3>
+                    Suletta Slaps a Bully on the Ass [Ep 1]
+                </h3>
+                <p>
+                    Suletta's certainly getting herself noticed on the first day of school!
+                </p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/TQHlJz1Wr7w?si=-DYBoqht8nAVdlXz"></iframe>
+                </div>
+            </article>
+            <hr>
+            <article>
+                <h3>
+                    Suletta's First Duel [Ep 1]
+                </h3>
+                <p>
+                    Suletta has some tricks up her sleeve!
+                </p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/LlPt4CLlOWE?si=jlYTEMg5ICt53OmR"></iframe>
+                </div>
+            </article>
+            <hr>
+            <article>
+                <h3>
+                    Suletta Collects Another Bride [Ep 3, Japanese]
+                </h3>
+                <p>
+                    She somehow pulled it off twice!
+                </p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/ZojaF9YWd5U?si=rKiOdIn7z7maOiFY"></iframe>
+                </div>
+            </article>
+            <hr>
+            <article>
+                <h3>
+                    Suletta Goes God-Mode [Ep 6, Japanese]
+                </h3>
+                <p>
+                    No one can stop Suletta like this!
+                </p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/3TdE0zI34_0?si=WMdLDYNXFocFZNcv"></iframe>
+                </div>
+            </article>
+            <hr>
+            <article>
+                <h3>
+                    It’s Not a 6v1 If You Have Imaginary Friends [Ep 9]
+                </h3>
+                <p>
+                    Suletta can't stop surprising everyone!
+                </p>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/u3KGWusAe44?si=2mP-SOPCjHPPZ-M0"></iframe>
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer>
+        <a href="#teto">Jump to the top</a>
+        <p>Az oldal kizárólag tanulmányi célú<br>
+        Csoknyai Balázs 2023 BCE</p>
+    </footer>
+    <script>
+        function spoiler(){
+            if (!confirm("Warning! This page contains spoilers about the plot. Do you want to proceed?")){
+                document.location.href="index.html" 
+            }
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Csoknyai Balázs">
+    <meta name="copyright" content="Gundam Database">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+<script src="galeria/jquery-3.7.1.js"></script> 
+
+
+    <nav id="teto">
+        <a href="index.html">Home</a>
+        <a href="characters.html" class="middleleft">Characters</a>
+        <a href="storyandclips.html" class="middleright">Story & Clips</a>
+        <a href="#" id="active">Shop</a>
+    </nav>
+    <header id="logo">
+        <img src="imgs/logo.jpeg" alt="Mobile Suit Gundam The Witch From Mercury logo" id="logokep">
+        <img src="imgs/scroll.gif" alt="Scroll down" id="gorgess">
+    </header>
+    <!-- Szöveges rész -->
+    <div id="container">
+        <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php">
+            <div class="blokk shop">
+                <h1>
+                    Registration
+                </h1>
+                <p>
+                    Please fill out with information
+                </p>
+                <section>
+                    <label>First name:<br>
+                        <input type="text" id="firsn" name="firstn" size="15">
+                    </label><br>
+                    <label>Last name:<br>
+                        <input type="text" id="lastn" name="lastn" size="15">
+                    </label><br>
+                    <label>Email adress:<br>
+                        <input type="email" id="email" name="email" size="25">
+                    </label><br>
+                    <label>Phone number:<br>
+                        <input type="tel" id="tel" name="tel" size="13" maxlength="13" placeholder="36-00-0000000" pattern="36-[0-9]{2}-[0-9]{7}">
+                    </label><br>
+                    <label>Country:<br>
+                        <input type="text" id="country" name="country" size="15">
+                    </label><br>
+                    <label>Address:<br>
+                        <input type="text" id="address" name="address" size="25">
+                    </label><br>
+                    <label>Password: <br>
+                        <input type="password" id="pass" name="pass" size="20">
+                    </label><br>
+                    Do you want to sign up to the newletter and get notified about new offers?<br>
+                    <label>
+                        <input type="radio" id="letteryes" name="letter" value="yes">
+                        Yes
+                    </label><br>
+                    <label>
+                        <input type="radio" id="letterno" name="letter" value="no">
+                        No
+                    </label><br>
+                    Do you accept the Terms & Conditions?
+                    <label>
+                        <input type="checkbox" id="terms" name="terms">
+                    </label><br>
+                </section>
+            </div>
+
+            <div class="blokk shop">
+                <h1>
+                    Products
+                </h1>
+                <p>
+                    Below you can find the available products from the series
+                </p>
+                <p style="text-indent: 4%; margin-top: 0%;"><!--mivel átmeneti információ, ezért logikusabb style taggel megoldani-->
+                    <i>Important infromation: The cutoff for Christmas orders to arrive in time for the Holidays is Dec. 15th!</i>
+                </p>
+                <section class="gunpla">
+                    <figure>
+                        <img src="imgs/shop/aeriel.jpeg" alt="Aeriel model figure">
+                    </figure>
+                    <h2>Gundam Aerial</h2>
+                    <p>25 USD</p>
+                    <label>
+                        <input type="number" id="aerialshop" name="aerialshop" min="0" max="2">
+                        Limit 2/customer
+                    </label>
+                </section>
+                <section class="gunpla">
+                    <figure>
+                        <img src="imgs/shop/darilbalde.jpeg" alt="Darilbalde model figure">
+                    </figure>
+                    <h2>Darilbalde</h2>
+                    <p>30 USD</p>
+                    <label>
+                        <input type="number" id="darilbaldeshop" name="darilbaldeshop" min="0" max="2">
+                        Limit 2/customer
+                    </label>
+                </section>
+                <section class="gunpla">
+                    <figure>
+                        <img src="imgs/shop/pharact.jpeg" alt="Pharact model figure">
+                    </figure>
+                    <h2>Gundam Pharact</h2>
+                    <p>35 USD</p>
+                    <label>
+                        <input type="number" id="pharactshop" name="pharactshop" min="0" max="1">
+                        Limit 1/customer
+                    </label>
+                </section>
+                <section id="price">
+                    <p>Calculate price with shipping and taxes:</p>
+                    <input type="button" id="calculate" value="Go!">
+                    <input type="text" id="result" size="5" value="0">
+                </section>
+                <input type="submit" id=submit value="Order">
+                <input type="reset" id="reset">
+            </div>
+        </form>
+    </div>
+    <footer>
+        <a href="#teto">Jump to the top</a>
+        <p>Az oldal kizárólag tanulmányi célú<br>
+        Csoknyai Balázs 2023 BCE</p>
+    </footer>
+</body>
+</html> 

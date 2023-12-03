@@ -1,7 +1,7 @@
 Készítette:
 Csoknyai Balázs
 
-Url cím:
+Url cím:  https://csokibalazs.github.io/webfejlesztes/
 
 Leírás: Az oldal a Mobile Suit Gundam: The Witch from Mercury sorozatot mutatja be. Az alapleírás mellett az aloldalakon a főszereplők bemutatása, a törénet leírása, érdekes videók valamint egy bolt is található.
 

@@ -6,17 +6,18 @@ Url cím:  https://csokibalazs.github.io/webfejlesztes/
 Leírás: Az oldal a Mobile Suit Gundam: The Witch from Mercury sorozatot mutatja be. Az alapleírás mellett az aloldalakon a főszereplők bemutatása, a törénet leírása, érdekes videók valamint egy bolt is található.
 
 Két oldalon is található saját javascript:
-		A Characters oldalon először egy figyelmeztetés ugrik fel, melyet elfogadva továbbenged, elutasítva pedig 	visszadob a Home oldalra, lejjebb a gombok megnyomása pedig többletinformációval szolgál.
-		A Shop oldalon a kiválasztott termékek ára számolható ki, valamint ehhez hozzáadja a script a szállítási 	költséget és adókat.
+		A Characters oldalon először egy figyelmeztetés ugrik fel, melyet elfogadva továbbenged, elutasítva pedig visszadob a Home oldalra, lejjebb a gombok megnyomása pedig többletinformációval szolgál.
+		A shop oldalon a kiválasztott termékek ára számolható ki, valamint ehhez hozzáadja a script a szállítási költséget és adókat.
 
 
 Fontok:
 Az oldal fő tartalma: Cormorant(https://fonts.google.com/specimen/Cormorant)
-A legtöbb gomb felirata: Cinzel(https://fonts.google.com/specimen/Cinzel)
+A néhány gomb felirata: Cinzel(https://fonts.google.com/specimen/Cinzel)
 
 Tartalom:
 A szöveg és képek fő forrása: https://en.gundam.info/about-gundam/series-pages/witch/
 Egyéb szövegek: https://en.wikipedia.org/wiki/Mobile_Suit_Gundam:_The_Witch_from_Mercury
 
 Görgetős gif: https://lottiefiles.com/animations/scroll-down-arrows-RdrHqbWTkv
-Az iframek és .video formázása: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp# webfejlesztes
+Az iframek és .video formázása: https://www.w3schools.com/howto/howto_css_responsive_iframes.asp
+A galleria script: https://galleriajs.github.io/

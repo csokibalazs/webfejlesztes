@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Csoknyai Balázs">
@@ -10,10 +11,15 @@
     <link rel="icon" href="imgs/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant:ital,wght@0,500;1,500&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-<script src="galeria/jquery-3.7.1.js"></script> 
+    <script src="jquery-3.7.1.js"></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="jquery-validation-1.19.5/dist/additional-methods.min.js"></script>
 
 
     <nav id="teto">
@@ -28,7 +34,7 @@
     </header>
     <!-- Szöveges rész -->
     <div id="container">
-        <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php">
+        <form method="post" action="http://szamtud.uni-corvinus.hu/receive.php" id="myform" novalidate>
             <div class="blokk shop">
                 <h1>
                     Registration
@@ -36,7 +42,7 @@
                 <p>
                     Please fill out with information
                 </p>
-                <section>
+                <section id=first>
                     <label>First name:<br>
                         <input type="text" id="firsn" name="firstn" size="15">
                     </label><br>
@@ -47,7 +53,7 @@
                         <input type="email" id="email" name="email" size="25">
                     </label><br>
                     <label>Phone number:<br>
-                        <input type="tel" id="tel" name="tel" size="13" maxlength="13" placeholder="36-00-0000000" pattern="36-[0-9]{2}-[0-9]{7}">
+                        <input type="tel" id="tel" name="tel" size="13" maxlength="13" placeholder="123 456 7890">
                     </label><br>
                     <label>Country:<br>
                         <input type="text" id="country" name="country" size="15">
@@ -60,15 +66,15 @@
                     </label><br>
                     Do you want to sign up to the newletter and get notified about new offers?<br>
                     <label>
-                        <input type="radio" id="letteryes" name="letter" value="yes">
+                        <input type="radio" id="letteryesi" name="letter" value="yes">
                         Yes
                     </label><br>
                     <label>
                         <input type="radio" id="letterno" name="letter" value="no">
                         No
                     </label><br>
-                    Do you accept the Terms & Conditions?
-                    <label>
+                    <label for="letter" class="error" style="display:none;"></label>
+                    <label>Do you accept the Terms & Conditions?<br>
                         <input type="checkbox" id="terms" name="terms">
                     </label><br>
                 </section>
@@ -81,8 +87,10 @@
                 <p>
                     Below you can find the available products from the series
                 </p>
-                <p style="text-indent: 4%; margin-top: 0%;"><!--mivel átmeneti információ, ezért logikusabb style taggel megoldani-->
-                    <i>Important infromation: The cutoff for Christmas orders to arrive in time for the Holidays is Dec. 15th!</i>
+                <p style="text-indent: 4%; margin-top: 0%;">
+                    <!--mivel átmeneti információ, ezért logikusabb style taggel megoldani-->
+                    <i>Important infromation: The cutoff for Christmas orders to arrive in time for the Holidays is Dec.
+                        15th!</i>
                 </p>
                 <section class="gunpla">
                     <figure>
@@ -91,7 +99,7 @@
                     <h2>Gundam Aerial</h2>
                     <p>25 USD</p>
                     <label>
-                        <input type="number" id="aerialshop" name="aerialshop" min="0" max="2">
+                        <input type="number" id="aerialshop" name="aerialshop" min="0"><br>
                         Limit 2/customer
                     </label>
                 </section>
@@ -102,7 +110,7 @@
                     <h2>Darilbalde</h2>
                     <p>30 USD</p>
                     <label>
-                        <input type="number" id="darilbaldeshop" name="darilbaldeshop" min="0" max="2">
+                        <input type="number" id="darilbaldeshop" name="darilbaldeshop" min="0"><br>
                         Limit 2/customer
                     </label>
                 </section>
@@ -113,14 +121,14 @@
                     <h2>Gundam Pharact</h2>
                     <p>35 USD</p>
                     <label>
-                        <input type="number" id="pharactshop" name="pharactshop" min="0" max="1">
+                        <input type="number" id="pharactshop" name="pharactshop" min="0"><br>
                         Limit 1/customer
                     </label>
                 </section>
                 <section id="price">
-                    <p>Calculate price with shipping and taxes:</p>
+                    <p>Calculate price with shipping and taxes(+30%):</p>
                     <input type="button" id="calculate" value="Go!">
-                    <input type="text" id="result" size="5" value="0">
+                    <input type="text" id="result" name="result" size="5" value="0">
                 </section>
                 <input type="submit" id=submit value="Order">
                 <input type="reset" id="reset">
@@ -130,7 +138,66 @@
     <footer>
         <a href="#teto">Jump to the top</a>
         <p>Az oldal kizárólag tanulmányi célú<br>
-        Csoknyai Balázs 2023 BCE</p>
+            Csoknyai Balázs 2023 BCE</p>
     </footer>
+    <script src="gundam.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#myform").validate({
+                rules: {
+                    firstn: "required",
+                    lastn: "required",
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                    tel: {
+                        required: true,
+                        phoneUS: true,
+                    },
+                    country: "required",
+                    address: "required",
+                    pass: {
+                        required: true,
+                        minlength: 10,
+                    },
+                    letter: {
+                        required: true,
+                    },
+                    terms: {
+                        required: true,
+                    },
+                    aerialshop: {
+                        range: [0, 2],
+                    },
+                    darilbaldeshop: {
+                        range: [0, 2],
+                    },
+                    pharactshop: {
+                        range: [0, 1],
+                    }
+                },
+                messages: {
+                    firstn: "<BR/>Please enter your first name",
+                    lastn: "<BR/>Please enter your last name",
+                    email: "<BR/>Enter a valid email",
+                    tel: "<BR/>Enter a valid phone number",
+                    country: "<BR/>Please enter your country of residence",
+                    address: "<BR/>Please enter your address",
+                    pass: {
+                        required: "<BR/>Enter a password",
+                        minlength: "<BR/>Your password must be 10 characters long",
+                    },
+                    letter: "Please choose an option",
+                    terms: "<BR/>You must accept the terms",
+                    aerialshop: "<BR/>The maximum order amount is 2<BR/>",
+                    darilbaldeshop: "<BR/>The maximum order amount is 2<BR/>",
+                    pharactshop: "<BR/>The maximum order amount is 1<BR/>",
+                },
+            });
+        });
+    </script>
+
 </body>
-</html> 
+
+</html>

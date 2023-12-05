@@ -107,7 +107,7 @@ nav a:hover {
 #container {
     display: flex;
     width: 95%;
-    background-color: rgb(247, 205, 154);
+    background-color: rgb(234, 200, 157);
     margin: auto;
     padding: 2%;
     border: 1px solid black;
@@ -143,7 +143,7 @@ nav a:hover {
     background-color: rgb(238, 217, 191);
     border: 1px solid black;
     border-radius: 11px;
-    padding: 0 2%;
+    padding: 3% 5%;
     flex: 1 1 100%;
     display: flex;
     flex-flow: row wrap;
@@ -158,6 +158,7 @@ nav a:hover {
     flex: 100%;
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
 }
 
 .smallphoto {
@@ -182,7 +183,7 @@ nav a:hover {
 }
 
 .galleria {
-    width: 86.5vw;
+    width: 80.5vw;
     height: 100vw;
     background: #000
 }
@@ -190,6 +191,24 @@ nav a:hover {
 .info {
     color: black;
     margin: 3% auto;
+}
+
+.info {
+    background-color: rgb(230, 154, 48);
+    color: black;
+    border: rgb(62, 62, 62) solid 1px;
+    border-radius: 16px;
+    padding: 3%;
+    font-family: 'Cormorant', Arial, serif;
+    font-size: 80%;
+}
+
+#aerial,
+#darilbalde,
+#pharact {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 /* Videók */
@@ -202,7 +221,10 @@ nav a:hover {
 
 #videos>article {
     flex: 80%;
-    padding: 3%
+    padding: 3%;
+    padding-top: 0;
+    border: 1px dashed rgb(99, 99, 99);
+    border-radius: 16px;
 }
 
 hr {
@@ -242,6 +264,38 @@ iframe {
     margin: 10% 0;
 }
 
+#first {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 5%;
+    margin: 3% 0;
+}
+
+#first>label {
+    flex: 100%;
+    margin: 1% 0;
+}
+
+input[type=text],
+input[type=email] {
+    width: 60%;
+    height: auto;
+    padding: 1%;
+    font-size: 80%;
+}
+
+input[type=tel],
+input[type=password] {
+    width: 50%;
+    padding: 1%;
+    font-size: 80%;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    transform: scale(1.5);
+}
+
 #price {
     display: flex;
     flex-flow: row wrap;
@@ -262,7 +316,9 @@ iframe {
     flex: 30%;
 }
 
-#submit, #reset, #calculate {
+#submit,
+#reset,
+#calculate {
     padding: 3px 3px;
     color: rgb(0, 0, 0);
     font-size: 20px;
@@ -309,17 +365,74 @@ footer p {
     margin: 4px;
 }
 
+label.error {
+    color: rgb(75, 4, 4);
+    background-color: rgb(243, 176, 51);
+    margin-top: 1%;
+    width: 100%
+}
+
 
 /* Egyéb eszközök*/
+@media all and (min-width:600px) {
+    /*tablet*/
 
-@media all and (min-width: 1100px) {
+    #logo {
+        height: 100vh;
+        margin-bottom: 55%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 65%, rgba(0, 0, 0, .2) 80%, rgba(0, 0, 0, 0) 100%);
+    }
+
+    #logokep {
+        width: 80%;
+    }
+
+    #gorgess {
+        width: 11%;
+        height: 11%;
+        margin-bottom: 10%;
+    }
+
+    #container {
+        font-size: 145%;
+    }
+
+    nav a {
+        padding: 3px 3px;
+        color: white;
+        font-size: 20px;
+        background-color: black;
+        border: 2px solid gray;
+        border-radius: 16px;
+        text-decoration: none;
+        text-align: center;
+        font-family: 'Cinzel', serif;
+        flex: 1 1 80%;
+        margin: .5% 2%;
+    }
+
+    figure {
+        margin: 8% 15%
+    }
+
+    .info {
+        padding: 2%;
+    }
+}
+
+
+@media all and (min-width: 1020px) {
     /*számítógép*/
 
     body {
         background-image: url("imgs/background.jpg");
     }
 
-    nav{
+    .kepjobb {
+        margin: 0;
+    }
+
+    nav {
         padding: 0.2% 13% 0.2% 13%;
     }
 
@@ -333,7 +446,7 @@ footer p {
         margin: .5%;
         flex: 19%;
     }
-    
+
     a.middleright {
         margin: .5%;
         flex: 19%;
@@ -342,7 +455,7 @@ footer p {
     #logo {
         height: 100vh;
         margin-bottom: 45%;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
     }
 
     #logokep {
@@ -367,10 +480,10 @@ footer p {
         padding: 2%;
         width: 66%;
         float: left;
-        flex:1 1 66%;
+        flex: 1 1 66%;
         margin-bottom: 4%;
     }
-    
+
     .kepjobb {
         margin-right: 3%;
         flex: 25%;
@@ -391,7 +504,7 @@ footer p {
         display: block;
         margin: 0;
     }
-    
+
     .charinfo {
         flex: 65%;
     }
@@ -403,12 +516,16 @@ footer p {
         margin: auto;
     }
 
+    .info {
+        padding: 1%;
+    }
+
     /* Videos */
 
     #videos {
         padding: 0 3%;
     }
-    
+
     #videos>article {
         padding: 1%
     }
@@ -423,16 +540,11 @@ footer p {
         transition: 1s;
     }
 
-    #submit, #reset {
+    #submit,
+    #reset {
         flex: 40%;
         margin: 1% 3%;
     }
-
-
-
-
-
-
 
 
     footer {
